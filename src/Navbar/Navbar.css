@@ -1,0 +1,284 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #9b3f8a, #4b00ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInLeft 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.menu-icon {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.close-icon:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.light-mode .menu-icon {
+  color: rgba(0, 0, 0, 0.6);
+}
+.light-mode .menu-icon:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+.light-mode .list {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+}
+.dark-mode .list {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  transition: right 0.4s ease;
+}
+
+.list li {
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.list li:hover {
+  text-shadow: 0 0 5px rgba(0, 188, 212, 0.6);
+}
+
+.list li::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, #9b3f8a, #4b00ad);
+  transition: width 0.3s ease;
+}
+
+.list li:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .list {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 80px;
+    gap: 20px;
+    transition: right 0.4s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9;
+  }
+
+  .nav h1 {
+    font-size: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+} */
+
+
+/* Navbar.css — updated for reliable mobile drawer behavior */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+}
+
+.nav h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #9b3f8a, #4b00ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInLeft 1.2s ease-out forwards;
+  opacity: 1; 
+}
+
+.menu-icon {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+.menu-icon:hover { opacity: 1; text-shadow: 0 0 8px rgba(255,255,255,0.8); }
+
+
+.menu-button {
+  display: none;           
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  z-index: 4000;            
+  color: inherit;
+  font-size: 1.25rem;
+}
+
+.hamburger { display: inline-block; line-height: 1; }
+
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.close-icon:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.8); }
+
+.light-mode .menu-icon { color: rgba(0, 0, 0, 0.6); }
+.light-mode .menu-icon:hover { color: rgba(0, 0, 0, 0.9); }
+.light-mode .list { background-color: rgba(255,255,255,0.95); color: #000; }
+.dark-mode .list { background-color: rgba(0,0,0,0.85); color: #fff; }
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  transition: right 0.4s ease;
+  align-items: center;
+  z-index: 2000;
+}
+
+.list li {
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.list li:hover { text-shadow: 0 0 5px rgba(0,188,212,0.6); }
+.list li::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, #9b3f8a, #4b00ad);
+  transition: width 0.3s ease;
+}
+.list li:hover::after { width: 100%; }
+
+@media (max-width: 600px) {
+  .nav {
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  .nav h1 { font-size: 20px; }
+
+  .menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .list {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 260px;
+    height: 100vh;
+    padding-top: 88px;
+    gap: 20px;
+    transition: right 0.28s cubic-bezier(.2,.9,.2,1);
+    backdrop-filter: blur(10px);
+    box-shadow: -6px 0 22px rgba(0, 0, 0, 0.25);
+    z-index: 3500;
+    background: rgba(0,0,0,0.9);
+  }
+
+  .list.open {
+    right: 0;
+  }
+
+  .list li {
+    font-size: 1.05rem;
+    padding: 8px 12px;
+  }
+
+  .menu-button { z-index: 4000; }
+  .list { z-index: 3800; }
+}
+
+:focus-visible {
+  outline: 3px solid rgba(75,0,173,0.18);
+  outline-offset: 2px;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-8px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}

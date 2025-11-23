@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.skills {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.dark .skills {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+
+.theme-toggle {
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+

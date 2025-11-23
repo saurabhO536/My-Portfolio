@@ -1,0 +1,70 @@
+*{ 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+body{ 
+  font-family: "Poppins", sans-serif; 
+  background: #0d0d0d; 
+  color: #fff; 
+}
+.h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #9b3f8a, #4b00ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInLeft 1.2s ease-out forwards;
+  opacity: 1; 
+}
+.contact-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #fff;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #9b3f8a, #4b00ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Intro paragraph */
+.contact-text {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Contact items */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-list h4 {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  color: #9b3f8a;
+}
+
+.contact-list a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+  color: #c792ea;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .contact-section h2 {
+    font-size: 1.7rem;
+  }
+}
