@@ -44,15 +44,15 @@ import Skills from './Skills/Skills'
 import Projects from './Projects/Projects'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Contact from './Contact/Contact'
-import MouseFollower from "mouse-follower";
-import gsap from "gsap";
+// import MouseFollower from "mouse-follower";
+// import gsap from "gsap";
 
 function App() {
 
   
-MouseFollower.registerGSAP(gsap);
+// MouseFollower.registerGSAP(gsap);
 
-const cursor = new MouseFollower();
+// const cursor = new MouseFollower();
 
 
   return (
