@@ -155,9 +155,14 @@ body {
   color: #fff;
 }
 
-@media (max-width: 555px) {
+@media (max-width: 899px) {
+  .container-left {
+    position: absolute;
+    margin-top: -380px;
+  }
   .container-right {
-    display: none;
+    position: relative;
+    margin-top: 200px;
   }
 }
 
