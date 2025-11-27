@@ -8,17 +8,24 @@ body{
   background: #0d0d0d; 
   color: #fff; 
 }
-.h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #9b3f8a, #4b00ad);
+.contact-section .contact-heading {
+  font-size: 2.5rem;
+  margin-bottom: 7rem; 
+  background: linear-gradient(to right, #9b3f8a, #0072ff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: slideInLeft 1.2s ease-out forwards;
-  opacity: 1; 
+  background-clip: text;
+  color: transparent; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  animation: fadeDown 1s ease-out forwards;
+  opacity: 0;
 }
+
 .contact-section {
+  margin-top: -50px;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 6rem 1rem; 
   color: #fff;
 }
 
@@ -33,7 +40,7 @@ body{
 /* Intro paragraph */
 .contact-text {
   max-width: 600px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 4rem;
   font-size: 1rem;
   color: #ccc;
 }
@@ -41,14 +48,17 @@ body{
 /* Contact items */
 .contact-list {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem; 
+  margin-bottom: 3rem;
 }
 
 .contact-list h4 {
   margin-bottom: 0.3rem;
   font-size: 1rem;
   color: #9b3f8a;
+
 }
 
 .contact-list a {
