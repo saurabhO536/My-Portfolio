@@ -10,7 +10,7 @@ body{
 }
 .contact-section .contact-heading {
   font-size: 2.5rem;
-  margin-bottom: 7rem; 
+  margin-bottom: 5rem; 
   background: linear-gradient(to right, #9b3f8a, #0072ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -20,6 +20,7 @@ body{
   display: inline-block;
   animation: fadeDown 1s ease-out forwards;
   opacity: 0;
+  
 }
 
 .contact-section {
@@ -31,7 +32,6 @@ body{
 
 .contact-section h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
   background: linear-gradient(to right, #9b3f8a, #4b00ad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -40,18 +40,20 @@ body{
 /* Intro paragraph */
 .contact-text {
   max-width: 600px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2.5rem;
   font-size: 1rem;
   color: #ccc;
 }
 
-/* Contact items */
 .contact-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  /* align-items: flex-start; */
   justify-content: center;
+  margin-left: 250px;
+  padding: 50px;
   gap: 3rem; 
-  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .contact-list h4 {
@@ -72,9 +74,18 @@ body{
   color: #c792ea;
 }
 
-/* Mobile */
+.contact-form-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+
+
 @media (max-width: 500px) {
   .contact-section h2 {
     font-size: 1.7rem;
   }
 }
+

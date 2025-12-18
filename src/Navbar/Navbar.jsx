@@ -45,7 +45,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav" role="navigation" aria-label="Main navigation">
+    <nav className="nav" role="navigation" aria-label="Main navigation">      
+      
       <h1 className="logo">SAURABH.DEV</h1>
 
       <button
@@ -85,6 +86,7 @@ const Navbar = () => {
         </li>
       </ul>
     </nav>
+    
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
-import "./Contact.css";
+import "./Contact.css"
+import './Form.css'
 
 const Contact = () => {
   return (
@@ -10,8 +11,15 @@ const Contact = () => {
         If you'd like to discuss frontend work, architecture-heavy problems, or
         FinTech products, feel free to reach out.
       </p>
-
+     <div className="contact-form-wrapper">
       <div className="contact-list">
+        <div>
+          <h4>Contact us</h4>
+          <a href="tel:9619502455">
+            9619502455
+          </a>
+        </div>
+
         <div>
           <h4>Email</h4>
           <a href="mailto:saurabhpatil8426@gmail.com">
@@ -40,6 +48,23 @@ const Contact = () => {
             github.com/saurabhO536
           </a>
         </div>
+      </div>
+
+      
+        <form className="form-container">
+          <h2>Contact Me</h2>
+          <div className="form-contents">
+            <label>Name :</label>
+            <input type="text" name="name" required placeholder="Enter your name" />
+
+            <label>Email :</label>
+            <input type="email" name="email" required placeholder="Enter your email" />
+
+            <label>Message</label>
+            <textarea name="message" placeholder="Write your message..." required />
+          </div>
+          <button type="submit">submit</button>
+        </form>
       </div>
     </section>
   );

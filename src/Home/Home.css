@@ -105,6 +105,30 @@ body {
   }
 }
 
+.background-img {
+  position: fixed;      /* or absolute, as you need */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* This class is always on the img */
+.background-img.fade {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 /* developer image constrained and not oversized */
 .container-right img {
   width: 100%;

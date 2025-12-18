@@ -1,0 +1,81 @@
+               
+.form-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 12px;
+
+  /* glassy dark card */
+  background: rgba(13, 13, 13, 0.9);
+  border: 1px solid rgba(155, 63, 138, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-container.dark {
+  background: #0d0f1acc;
+  color: white;
+}
+.form-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-container.dark input,
+.form-container.dark textarea {
+  background: #1b1d2a;
+  border: 1px solid #555;
+  color: white;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #6366f1;
+}
+
+button {
+  padding: 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
